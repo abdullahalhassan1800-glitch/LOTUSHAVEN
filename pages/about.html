@@ -247,6 +247,14 @@
     <style>
     .project-detail-hero { position:relative;min-height:35vh;display:flex;align-items:flex-end;overflow:hidden; }
     .project-detail-bg { position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg,#0d0d0d 0%,#1a1a0d 50%,#0d0d0d 100%); }
+    @media (max-width: 768px) {
+        .project-detail-hero .container { padding-top:100px !important; padding-bottom:40px !important; }
+        .project-detail-hero { min-height:30vh; }
+    }
+    @media (max-width: 480px) {
+        .project-detail-hero .container { padding-top:80px !important; padding-bottom:30px !important; }
+        .project-detail-hero { min-height:25vh; }
+    }
     </style>
 </body>
 </html>

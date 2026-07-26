@@ -294,6 +294,16 @@
         font-size: 0.95rem; color: var(--text-secondary);
     }
     .highlight-item i { color: var(--gold); font-size: 0.9rem; }
+    @media (max-width: 768px) {
+        .project-detail-hero .container { padding-top:100px !important; padding-bottom:40px !important; }
+        .project-detail-hero { min-height:30vh; }
+        .section-subtitle { text-align:center; }
+    }
+    @media (max-width: 480px) {
+        .project-detail-hero .container { padding-top:80px !important; padding-bottom:30px !important; }
+        .project-detail-hero { min-height:25vh; }
+        .highlight-item { font-size:0.85rem; gap:8px; }
+    }
     </style>
 </body>
 </html>

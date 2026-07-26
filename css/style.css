@@ -702,6 +702,7 @@ img { max-width: 100%; display: block; }
 .hero-section {
     position: relative;
     min-height: 100vh;
+    min-height: 100dvh;
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -1983,6 +1984,279 @@ img { max-width: 100%; display: block; }
     background: var(--gold);
     color: var(--black);
     transform: translateY(-3px);
+}
+
+/* ============================
+   COMPREHENSIVE MOBILE FIXES
+   ============================ */
+
+/* --- Tablets & Medium screens (max-width: 1024px) --- */
+@media (max-width: 1024px) {
+    .section-padding { padding: 70px 0; }
+    .section-header { margin-bottom: 40px; }
+    .hero-content { padding-top: 100px; }
+    .project-hero-card { min-height: 400px; }
+    .hero-stats { gap: 24px; }
+    .invest-section { padding: 80px 0; }
+}
+
+/* --- Small Tablets (max-width: 768px) --- */
+@media (max-width: 768px) {
+    html { font-size: 15px; }
+    .container { padding: 0 16px; }
+    .section-padding { padding: 50px 0; }
+    .section-header { margin-bottom: 30px; }
+
+    /* Hero section mobile */
+    .hero-section { min-height: auto; min-height: auto; padding: 120px 0 60px; }
+
+    /* Preloader mobile */
+    .preloader-brand {
+        font-size: 2rem;
+        letter-spacing: 8px;
+    }
+    .preloader-brand::after {
+        background: linear-gradient(135deg, #F7E7CE 0%, #FFFFFF 50%, #F2D06B 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        font-family: var(--font-display);
+    }
+    .preloader-sub {
+        font-size: 0.7rem;
+        letter-spacing: 5px;
+    }
+    .preloader-lotus-icon { width: 80px; height: 80px; }
+    .preloader-content { gap: 28px; }
+    .preloader-bar-wrap { width: 180px; }
+    .tagline-word { font-size: 0.65rem; letter-spacing: 3px; }
+    .tagline-word:nth-child(2) { letter-spacing: 4px; }
+
+    /* Hero mobile */
+    .hero-content { padding-top: 90px; padding: 90px 16px 0; }
+    .hero-badge {
+        padding: 6px 14px;
+        margin-bottom: 20px;
+    }
+    .hero-badge span:last-child {
+        font-size: 0.6rem;
+        letter-spacing: 1px;
+    }
+    .hero-title-line { line-height: 1.15; }
+    .hero-desc {
+        font-size: 0.95rem;
+        max-width: 100%;
+        margin-bottom: 28px;
+    }
+    .hero-ctas {
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 40px;
+    }
+    .hero-ctas .btn { width: 100%; justify-content: center; }
+    .hero-stats {
+        gap: 16px;
+        justify-content: flex-start;
+    }
+    .stat-number { font-size: 2rem; }
+    .stat-suffix { font-size: 1.4rem; }
+    .stat-label { font-size: 0.7rem; }
+    .hero-stat-divider { height: 30px; }
+    .hero-scroll-indicator { bottom: 20px; }
+    .scroll-line { height: 30px; }
+
+    /* Navbar mobile */
+    .nav-brand-name { font-size: 1rem; letter-spacing: 3px; }
+    .nav-brand-sub { font-size: 0.5rem; letter-spacing: 3px; }
+    .nav-logo-icon { width: 40px; height: 40px; }
+    .nav-container { padding: 0 12px; height: 56px; }
+
+    /* Mobile menu */
+    .mobile-link { font-size: 1rem; padding: 10px 24px; letter-spacing: 2px; }
+    .mobile-call-btn, .mobile-book-btn {
+        padding: 12px 24px;
+        font-size: 0.75rem;
+    }
+    .mobile-menu-cta { flex-direction: column; gap: 10px; width: 100%; max-width: 240px; }
+    .mobile-call-btn, .mobile-book-btn { width: 100%; text-align: center; }
+
+    /* Projects mobile */
+    .project-hero-card { min-height: 350px; margin-bottom: 40px; }
+    .project-hero-content { padding: 24px; }
+    .project-hero-title { font-size: 1.8rem; }
+    .project-hero-location { font-size: 0.85rem; }
+    .project-hero-highlights { gap: 10px; }
+    .project-hero-highlights span { font-size: 0.75rem; }
+    .project-hero-ctas { flex-direction: column; gap: 10px; }
+    .project-hero-ctas .btn { width: 100%; justify-content: center; }
+    .plot-options-title { font-size: 1.4rem; }
+    .plot-card { padding: 28px 20px; }
+
+    /* Why section mobile */
+    .why-card { padding: 28px 20px; }
+    .why-card-icon { width: 48px; height: 48px; font-size: 1.1rem; margin-bottom: 16px; }
+    .why-card h3 { font-size: 1.05rem; }
+    .why-card p { font-size: 0.85rem; }
+
+    /* Amenities mobile */
+    .amenity-card { padding: 24px 14px; }
+    .amenity-card h4 { font-size: 0.75rem; }
+    .amenity-icon { width: 48px; height: 48px; font-size: 1rem; margin-bottom: 12px; }
+
+    /* Map mobile */
+    .location-map-placeholder { height: 250px; }
+    .map-landmark {
+        font-size: 0.55rem;
+        padding: 4px 7px;
+        gap: 4px;
+    }
+    .map-landmark i { font-size: 0.65rem; }
+    .map-label { font-size: 0.6rem; padding: 3px 8px; }
+    .map-dot { width: 10px; height: 10px; }
+    .map-pulse { width: 40px; height: 40px; }
+
+    /* Gallery mobile */
+    .gallery-grid { gap: 12px; }
+    .gallery-item { aspect-ratio: 4/3; }
+    .gallery-item.gi-large { aspect-ratio: 16/9; }
+
+    /* Invest section mobile */
+    .invest-section { padding: 60px 0; }
+    .invest-title { font-size: clamp(1.5rem, 4vw, 2.2rem); }
+    .invest-desc { font-size: 0.95rem; margin-bottom: 28px; }
+    .invest-highlights { gap: 12px; }
+    .invest-highlight {
+        padding: 10px 16px;
+        font-size: 0.75rem;
+    }
+    .invest-ctas { flex-direction: column; gap: 12px; }
+    .invest-ctas .btn { width: 100%; justify-content: center; }
+
+    /* Testimonials mobile */
+    .testimonial-card { padding: 24px; }
+    .testimonial-card > p { font-size: 0.88rem; }
+
+    /* Taglines mobile */
+    .tagline-card { padding: 20px 14px; }
+    .tagline-card span { font-size: 0.85rem; }
+
+    /* Contact mobile */
+    .contact-form-wrap { padding: 24px; }
+    .form-title { font-size: 1.3rem; margin-bottom: 20px; }
+    .form-group input, .form-group select, .form-group textarea {
+        padding: 12px 14px;
+        font-size: 0.85rem;
+    }
+    .contact-detail { gap: 12px; }
+    .contact-detail i { width: 36px; height: 36px; min-width: 36px; font-size: 0.85rem; }
+    .contact-detail strong { font-size: 0.85rem; }
+    .contact-detail span { font-size: 0.8rem; }
+
+    /* Footer mobile */
+    .footer-top { padding: 50px 0 30px; }
+    .footer-logo { margin-bottom: 16px; }
+    .footer-brand-name { font-size: 1.1rem; }
+
+    /* WhatsApp float mobile */
+    .whatsapp-float {
+        width: 50px; height: 50px;
+        font-size: 1.5rem;
+        bottom: 20px; right: 20px;
+    }
+    .back-to-top {
+        width: 36px; height: 36px;
+        bottom: 20px; right: 80px;
+        font-size: 0.85rem;
+    }
+
+    /* Inner page hero mobile */
+    .project-detail-hero { min-height: 30vh; }
+    .project-detail-hero .container {
+        padding-top: 100px !important;
+        padding-bottom: 40px !important;
+    }
+
+    /* About section mobile */
+    .about-experience-badge {
+        bottom: -15px;
+        left: -10px;
+        padding: 16px;
+    }
+    .exp-number { font-size: 1.8rem; }
+    .exp-text { font-size: 0.65rem; }
+    .about-image-accent { bottom: -10px; right: -10px; }
+}
+
+/* --- Mobile Phones (max-width: 480px) --- */
+@media (max-width: 480px) {
+    html { font-size: 14px; }
+    .container { padding: 0 14px; }
+    .section-padding { padding: 40px 0; }
+
+    /* Preloader ultra small */
+    .preloader-brand {
+        font-size: 1.5rem;
+        letter-spacing: 5px;
+    }
+    .preloader-sub { font-size: 0.6rem; letter-spacing: 3px; }
+    .preloader-lotus-icon { width: 60px; height: 60px; }
+    .preloader-bar-wrap { width: 140px; }
+    .tagline-word { font-size: 0.55rem; }
+
+    /* Hero ultra small */
+    .hero-badge span:last-child { font-size: 0.5rem; letter-spacing: 0.5px; }
+    .hero-desc { font-size: 0.88rem; }
+    .stat-number { font-size: 1.6rem; }
+    .stat-suffix { font-size: 1.1rem; }
+
+    /* Nav ultra small */
+    .nav-brand-name { font-size: 0.85rem; letter-spacing: 2px; }
+    .nav-brand-sub { display: none; }
+    .nav-logo-icon { width: 34px; height: 34px; }
+    .nav-container { height: 50px; padding: 0 10px; }
+
+    /* Buttons */
+    .btn { padding: 14px 24px; font-size: 0.8rem; }
+    .btn-lg { padding: 16px 30px; font-size: 0.85rem; }
+
+    /* Project hero ultra small */
+    .project-hero-card { min-height: 280px; }
+    .project-hero-content { padding: 20px; }
+    .project-hero-title { font-size: 1.5rem; }
+    .project-badge-large { font-size: 0.65rem; padding: 6px 14px; }
+
+    /* Plot cards */
+    .plot-cards { max-width: 100%; }
+    .plot-card h4 { font-size: 1.2rem; }
+    .plot-card-icon { width: 52px; height: 52px; font-size: 1.2rem; }
+
+    /* Invest section ultra small */
+    .invest-title { font-size: 1.4rem; }
+    .invest-desc { font-size: 0.88rem; }
+    .invest-highlight {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Contact form ultra small */
+    .contact-form-wrap { padding: 20px; }
+    .form-title { font-size: 1.15rem; }
+    .form-row { gap: 12px; }
+
+    /* Location category */
+    .location-category { padding: 24px 16px; }
+    .location-category h3 { font-size: 0.95rem; }
+    .location-category li { font-size: 0.8rem; padding: 8px 0; }
+
+    /* Inner page hero ultra small */
+    .project-detail-hero { min-height: 25vh; }
+    .project-detail-hero .container {
+        padding-top: 80px !important;
+        padding-bottom: 30px !important;
+    }
+
+    /* Map */
+    .location-map-placeholder { height: 200px; }
 }
 
 /* ============================
