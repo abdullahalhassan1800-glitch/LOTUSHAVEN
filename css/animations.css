@@ -1,0 +1,263 @@
+/* ============================================
+   LOTUSHAVEN — ANIMATIONS CSS
+   ============================================ */
+
+/* --- Reveal Animations --- */
+.reveal-up, .reveal-left, .reveal-right, .reveal-scale {
+    opacity: 0;
+    transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition-delay: var(--delay, 0s);
+}
+.reveal-up { transform: translateY(40px); }
+.reveal-left { transform: translateX(-40px); }
+.reveal-right { transform: translateX(40px); }
+.reveal-scale { transform: scale(0.9); }
+
+.reveal-up.revealed { opacity: 1; transform: translateY(0); }
+.reveal-left.revealed { opacity: 1; transform: translateX(0); }
+.reveal-right.revealed { opacity: 1; transform: translateX(0); }
+.reveal-scale.revealed { opacity: 1; transform: scale(1); }
+
+/* --- Preloader Animations --- */
+@keyframes textRevealClip {
+    0% { clip-path: inset(0 100% 0 0); }
+    100% { clip-path: inset(0 0 0 0); }
+}
+
+@keyframes lotusPetalBloom {
+    0% { opacity: 0; transform: scale(0) rotate(-30deg); }
+    60% { opacity: 0.8; transform: scale(1.1) rotate(5deg); }
+    100% { opacity: var(--petal-opacity, 0.7); transform: scale(1) rotate(0); }
+}
+
+@keyframes lotusGlow {
+    0% { opacity: 0; transform: scale(0.5); }
+    100% { opacity: 0.3; transform: scale(1); }
+}
+
+@keyframes preloaderParticleFloat {
+    0% { opacity: 0; transform: translateY(0) scale(0); }
+    20% { opacity: 1; }
+    80% { opacity: 0.5; }
+    100% { opacity: 0; transform: translateY(-200px) scale(1.5); }
+}
+
+/* --- General Animations --- */
+@keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.5); }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+@keyframes floatSlow {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(2deg); }
+}
+
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+@keyframes scrollBounce {
+    0%, 100% { transform: scaleY(1); opacity: 1; }
+    50% { transform: scaleY(0.5); opacity: 0.3; }
+}
+
+@keyframes marqueeScroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+@keyframes mapPulse {
+    0% { transform: translate(-50%, -50%) scale(1); opacity: 0.8; }
+    100% { transform: translate(-50%, -50%) scale(3); opacity: 0; }
+}
+
+@keyframes whatsappPulse {
+    0%, 100% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); }
+    50% { box-shadow: 0 4px 30px rgba(37, 211, 102, 0.6), 0 0 0 10px rgba(37, 211, 102, 0.1); }
+}
+
+@keyframes heroFloat1 {
+    0%, 100% { transform: translateY(0) translateX(0); }
+    25% { transform: translateY(-10px) translateX(5px); }
+    50% { transform: translateY(-5px) translateX(-3px); }
+    75% { transform: translateY(-15px) translateX(8px); }
+}
+
+@keyframes heroFloat2 {
+    0%, 100% { transform: translateY(0) translateX(0); }
+    33% { transform: translateY(-12px) translateX(-8px); }
+    66% { transform: translateY(-8px) translateX(5px); }
+}
+
+@keyframes heroFloat3 {
+    0%, 100% { transform: translateY(0) translateX(0); }
+    50% { transform: translateY(-18px) translateX(-5px); }
+}
+
+.hf-1 { animation: heroFloat1 6s ease-in-out infinite; }
+.hf-2 { animation: heroFloat2 7s ease-in-out infinite; }
+.hf-3 { animation: heroFloat3 5s ease-in-out infinite; }
+
+/* --- Particle Animations --- */
+.hero-particle {
+    animation: particleDrift linear infinite;
+}
+
+@keyframes particleDrift {
+    0% { 
+        opacity: 0; 
+        transform: translateY(0) translateX(0) scale(0);
+    }
+    10% { 
+        opacity: 1;
+        transform: translateY(-20px) translateX(10px) scale(1);
+    }
+    90% { 
+        opacity: 0.3;
+    }
+    100% { 
+        opacity: 0; 
+        transform: translateY(-400px) translateX(var(--drift-x, 50px)) scale(0.3);
+    }
+}
+
+/* --- Navbar Scroll Transition --- */
+.navbar {
+    transition: background 0.4s ease, padding 0.4s ease, border-color 0.4s ease;
+}
+
+/* --- Card Hover Effects --- */
+.plot-card::after,
+.why-card::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(212, 168, 67, 0.06) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.4s;
+    pointer-events: none;
+    border-radius: inherit;
+}
+.plot-card:hover::after,
+.why-card:hover::after { opacity: 1; }
+
+/* --- Button Ripple Effect --- */
+.btn-ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.3);
+    transform: scale(0);
+    animation: ripple 0.6s linear;
+    pointer-events: none;
+}
+@keyframes ripple {
+    to { transform: scale(4); opacity: 0; }
+}
+
+/* --- Smooth Counter Animation --- */
+.stat-number {
+    transition: all 0.3s;
+}
+
+/* --- Gallery Hover Effect --- */
+.gallery-item::after {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 50%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(212, 168, 67, 0.08), transparent);
+    transition: left 0.7s ease;
+    pointer-events: none;
+}
+.gallery-item:hover::after { left: 100%; }
+
+/* --- Testimonial Card Shine --- */
+.testimonial-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 100%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(212, 168, 67, 0.03), transparent);
+    transition: left 0.8s ease;
+    pointer-events: none;
+}
+.testimonial-card { position: relative; overflow: hidden; }
+.testimonial-card:hover::before { left: 100%; }
+
+/* --- Tagline Card Glow --- */
+.tagline-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 60%; height: 2px;
+    background: var(--gold-gradient);
+    opacity: 0;
+    transition: opacity 0.4s, width 0.4s;
+}
+.tagline-card { position: relative; }
+.tagline-card:hover::after { opacity: 1; width: 80%; }
+
+/* --- Loading State for Submit Button --- */
+.btn.loading {
+    pointer-events: none;
+    position: relative;
+}
+.btn.loading::after {
+    content: '';
+    position: absolute;
+    width: 20px; height: 20px;
+    border: 2px solid transparent;
+    border-top-color: currentColor;
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+}
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* --- Success Message --- */
+.form-success {
+    text-align: center;
+    padding: 40px;
+}
+.form-success i {
+    font-size: 3rem;
+    color: var(--gold);
+    margin-bottom: 16px;
+    animation: successPop 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+@keyframes successPop {
+    0% { transform: scale(0); }
+    100% { transform: scale(1); }
+}
+.form-success h3 {
+    font-family: var(--font-serif);
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+}
+.form-success p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* --- Reduced Motion --- */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    .reveal-up, .reveal-left, .reveal-right, .reveal-scale {
+        opacity: 1;
+        transform: none;
+    }
+}
