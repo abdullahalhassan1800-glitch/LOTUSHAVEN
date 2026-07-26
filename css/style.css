@@ -2478,7 +2478,5 @@ img { max-width: 100%; display: block; }
 [data-theme="light"]::-webkit-scrollbar-track { background: #F0EBE2; }
 [data-theme="light"]::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 4px; }
 
-/* Responsive theme toggle */
-@media (max-width: 1024px) {
-    .theme-toggle { display: none; }
-}
+/* Theme toggle always visible */
+.theme-toggle { display: flex; }
