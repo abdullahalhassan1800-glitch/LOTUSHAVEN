@@ -354,33 +354,75 @@
             </div>
             
             <div class="project-hero-card reveal-up" data-delay="0.3">
-                <div class="project-hero-bg">
-                    <img src="images/brochure_page_5.png" alt="Rukmani Vihar Township" class="project-hero-img" loading="lazy">
-                </div>
                 <div class="project-hero-overlay"></div>
-                <div class="project-hero-content">
-                    <div class="project-badge-large">
-                        <i class="fas fa-star"></i> Flagship Project
-                    </div>
-                    <h3 class="project-hero-title">RUKMANI VIHAR</h3>
-                    <p class="project-hero-location">
-                        <i class="fas fa-map-marker-alt"></i>
-                        Near Noida International Airport (Jewar) — Yamuna Expressway Corridor
-                    </p>
-                    <div class="project-hero-highlights">
-                        <span><i class="fas fa-check-circle"></i> 40+ Bighas</span>
-                        <span><i class="fas fa-check-circle"></i> Premium Gated Township</span>
-                        <span><i class="fas fa-check-circle"></i> Registry + Mutation Clear</span>
-                        <span><i class="fas fa-check-circle"></i> Bank Loan Available</span>
-                    </div>
-                    <div class="project-hero-ctas">
-                        <a href="pages/rukmani-vihar.html" class="btn btn-primary">
-                            <span>View Project Details</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-                        <a href="pages/contact.html" class="btn btn-outline">
-                            <span>Enquire Now</span>
-                        </a>
+                <div class="project-hero-content" style="position:relative;z-index:2;">
+                    <div class="about-grid" style="gap:40px;align-items:center;">
+                        <div>
+                            <div class="project-badge-large">
+                                <i class="fas fa-star"></i> Flagship Project
+                            </div>
+                            <h3 class="project-hero-title">RUKMANI VIHAR</h3>
+                            <p class="project-hero-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Near Noida International Airport (Jewar) — Yamuna Expressway Corridor
+                            </p>
+                            <div class="project-hero-highlights">
+                                <span><i class="fas fa-check-circle"></i> 40+ Bighas</span>
+                                <span><i class="fas fa-check-circle"></i> Premium Gated Township</span>
+                                <span><i class="fas fa-check-circle"></i> Registry + Mutation Clear</span>
+                                <span><i class="fas fa-check-circle"></i> Bank Loan Available</span>
+                            </div>
+                            <div class="project-hero-ctas">
+                                <a href="pages/rukmani-vihar.html" class="btn btn-primary">
+                                    <span>View Project Details</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="contact-form-wrap" style="background:rgba(18,18,16,0.95);border-color:rgba(212,168,67,0.15);">
+                                <form class="contact-form" id="projectEnqForm">
+                                    <h3 class="form-title">Book a Free Site Visit</h3>
+                                    <div class="form-group">
+                                        <input type="text" id="pFormName" placeholder=" " required>
+                                        <label for="pFormName">Full Name *</label>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <input type="tel" id="pFormPhone" placeholder=" " required>
+                                            <label for="pFormPhone">Phone *</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="email" id="pFormEmail" placeholder=" ">
+                                            <label for="pFormEmail">Email</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <select id="pFormInterest" required>
+                                            <option value="" disabled selected>Select Interest *</option>
+                                            <option>100 Sq. Yard Plot</option>
+                                            <option>200 Sq. Yard Plot</option>
+                                            <option>Commercial Plot</option>
+                                            <option>Investment Opportunity</option>
+                                            <option>General Enquiry</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" id="pFormCity" placeholder=" ">
+                                        <label for="pFormCity">Your City</label>
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea id="pFormMessage" rows="2" placeholder=" "></textarea>
+                                        <label for="pFormMessage">Message (Optional)</label>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary btn-full">
+                                        <span>Submit Enquiry</span>
+                                        <i class="fas fa-paper-plane"></i>
+                                    </button>
+                                    <p class="form-disclaimer"><i class="fas fa-lock"></i> 100% Secure & Confidential</p>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

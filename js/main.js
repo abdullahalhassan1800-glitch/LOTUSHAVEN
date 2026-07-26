@@ -332,6 +332,26 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // ========== PROJECT ENQUIRY FORM ==========
+    const projectEnqForm = document.getElementById('projectEnqForm');
+    if (projectEnqForm) {
+        projectEnqForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const submitBtn = this.querySelector('button[type="submit"]');
+            submitBtn.classList.add('loading');
+            submitBtn.innerHTML = '<span>Submitting...</span>';
+            setTimeout(() => {
+                this.innerHTML = `
+                    <div class="form-success">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Thank You!</h3>
+                        <p>Your enquiry has been submitted successfully.<br>Our team will contact you within 24 hours.</p>
+                    </div>
+                `;
+            }, 1500);
+        });
+    }
+
     // ========== PARALLAX EFFECT ON SCROLL ==========
     let ticking = false;
     window.addEventListener('scroll', () => {
