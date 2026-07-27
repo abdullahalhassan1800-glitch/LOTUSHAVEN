@@ -3,6 +3,17 @@
    ============================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
+    // ========== PRELOADER ==========
+    window.addEventListener('load', () => {
+        const preloader = document.getElementById('preloader');
+        if (preloader) {
+            setTimeout(() => {
+                preloader.classList.add('hidden');
+                setTimeout(() => { preloader.style.display = 'none'; }, 600);
+            }, 2000);
+        }
+    });
+
     // ========== HERO ANIMATIONS ==========
     function initHeroAnimations() {
         const heroReveals = document.querySelectorAll('.hero-content .reveal-up');
