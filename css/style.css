@@ -2165,9 +2165,9 @@ img { max-width: 100%; display: block; }
     background: rgba(201, 162, 78, 0.06);
     border-color: rgba(201, 162, 78, 0.12);
 }
-[data-theme="light"] .hero-title-line { color: #1C1915; }
-[data-theme="light"] .hero-title-accent { color: #3D3730; }
-[data-theme="light"] .hero-desc { color: #3A3530; }
+[data-theme="light"] .hero-title-line { color: #FFFFFF; }
+[data-theme="light"] .hero-title-accent { color: #F0E6D3; }
+[data-theme="light"] .hero-desc { color: #E0D6C4; }
 [data-theme="light"] .hero-float-card {
     background: rgba(255, 255, 255, 0.92);
     border-color: rgba(201, 162, 78, 0.12);
