@@ -1337,13 +1337,12 @@ img { max-width: 100%; display: block; }
 .gallery-section { background: var(--black); }
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 }
 .gallery-item {
     position: relative;
     border-radius: var(--radius-md);
-    overflow: hidden;
     border: 1px solid var(--dark-border);
     cursor: pointer;
     background: #0a0a0a;
