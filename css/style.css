@@ -1408,7 +1408,8 @@ img { max-width: 100%; display: block; }
 }
 .invest-desc {
     font-size: 1.1rem;
-    color: var(--text-secondary);
+    font-weight: 700;
+    color: #FFFFFF;
     max-width: 650px;
     margin: 0 auto 40px;
     line-height: 1.8;
@@ -1429,8 +1430,8 @@ img { max-width: 100%; display: block; }
     border: 1px solid rgba(212, 168, 67, 0.15);
     border-radius: 30px;
     font-size: 0.85rem;
-    font-weight: 500;
-    color: var(--text-secondary);
+    font-weight: 700;
+    color: #FFFFFF;
 }
 .invest-highlight i { color: var(--gold); }
 .invest-ctas {
@@ -2209,11 +2210,11 @@ img { max-width: 100%; display: block; }
 
 [data-theme="light"] .invest-bg-img { opacity: 0.2; }
 [data-theme="light"] .invest-title { color: #1A1A1A; }
-[data-theme="light"] .invest-desc { color: #3A3530; }
+[data-theme="light"] .invest-desc { color: #1A1A1A; }
 [data-theme="light"] .invest-highlight {
     background: rgba(212, 168, 67, 0.06);
     border-color: rgba(212, 168, 67, 0.15);
-    color: #3A3530;
+    color: #1A1A1A;
 }
 
 [data-theme="light"] .testimonial-card > p { color: #3A3530; }
