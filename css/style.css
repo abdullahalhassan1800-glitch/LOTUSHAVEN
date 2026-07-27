@@ -1409,7 +1409,7 @@ img { max-width: 100%; display: block; }
 .invest-desc {
     font-size: 1.1rem;
     font-weight: 700;
-    color: #FFFFFF;
+    color: #FFFFFF !important;
     max-width: 650px;
     margin: 0 auto 40px;
     line-height: 1.8;
@@ -1431,7 +1431,7 @@ img { max-width: 100%; display: block; }
     border-radius: 30px;
     font-size: 0.85rem;
     font-weight: 700;
-    color: #FFFFFF;
+    color: #FFFFFF !important;
 }
 .invest-highlight i { color: var(--gold); }
 .invest-ctas {
