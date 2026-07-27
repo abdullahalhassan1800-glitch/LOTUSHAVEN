@@ -552,6 +552,7 @@ img { max-width: 100%; display: block; }
     display: flex;
     align-items: center;
     overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
 }
 .hero-bg-layer {
     position: absolute;
