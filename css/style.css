@@ -157,12 +157,12 @@ img { max-width: 100%; display: block; }
 }
 .btn-outline {
     background: transparent;
-    color: var(--gold);
-    border: 1.5px solid var(--gold);
+    color: var(--white);
+    border: 1.5px solid var(--white);
     border-radius: var(--radius-sm);
 }
 .btn-outline:hover {
-    background: var(--gold);
+    background: var(--white);
     color: var(--black);
     transform: translateY(-2px);
 }
