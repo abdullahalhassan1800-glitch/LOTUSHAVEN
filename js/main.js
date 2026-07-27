@@ -3,89 +3,6 @@
    ============================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
-    // ========== PRELOADER ==========
-    const preloader = document.getElementById('preloader');
-    const preloaderPetals = document.querySelectorAll('.lotus-petal');
-    const preloaderGlow = document.querySelector('.lotus-glow');
-    const preloaderBrand = document.querySelector('.preloader-brand');
-    const preloaderSub = document.querySelector('.preloader-sub');
-    const preloaderBarWrap = document.querySelector('.preloader-bar-wrap');
-    const preloaderBar = document.querySelector('.preloader-bar');
-    const preloaderTagline = document.querySelector('.preloader-tagline');
-    const taglineWords = document.querySelectorAll('.tagline-word');
-    const preloaderParticlesContainer = document.getElementById('preloaderParticles');
-
-    // Create preloader particles
-    for (let i = 0; i < 30; i++) {
-        const particle = document.createElement('div');
-        particle.className = 'preloader-particle';
-        particle.style.left = Math.random() * 100 + '%';
-        particle.style.top = 50 + Math.random() * 50 + '%';
-        particle.style.width = (1 + Math.random() * 3) + 'px';
-        particle.style.height = particle.style.width;
-        particle.style.animation = `preloaderParticleFloat ${2 + Math.random() * 3}s ease infinite`;
-        particle.style.animationDelay = Math.random() * 2 + 's';
-        preloaderParticlesContainer.appendChild(particle);
-    }
-
-    // Preloader animation sequence
-    function runPreloader() {
-        const tl = [
-            { delay: 300, fn: () => animatePetals() },
-            { delay: 800, fn: () => { preloaderBrand.style.opacity = '1'; }},
-            { delay: 400, fn: () => { preloaderSub.style.opacity = '1'; preloaderSub.style.transition = 'opacity 0.6s'; }},
-            { delay: 300, fn: () => { preloaderBarWrap.style.opacity = '1'; preloaderBarWrap.style.transition = 'opacity 0.4s'; }},
-            { delay: 100, fn: () => { preloaderBar.style.width = '100%'; }},
-            { delay: 800, fn: () => { preloaderTagline.style.opacity = '1'; preloaderTagline.style.transition = 'opacity 0.5s'; }},
-            { delay: 200, fn: () => animateTaglineWords() },
-            { delay: 1200, fn: () => hidePreloader() },
-        ];
-
-        let cumulative = 0;
-        tl.forEach(step => {
-            cumulative += step.delay;
-            setTimeout(step.fn, cumulative);
-        });
-    }
-
-    function animatePetals() {
-        preloaderPetals.forEach((petal, i) => {
-            const delay = i * 120;
-            const opacity = parseFloat(petal.getAttribute('opacity')) || 0.7;
-            petal.style.setProperty('--petal-opacity', opacity);
-            setTimeout(() => {
-                petal.style.animation = `lotusPetalBloom 0.8s ease forwards`;
-                petal.style.animationDelay = `${delay}ms`;
-            }, delay);
-        });
-        if (preloaderGlow) {
-            setTimeout(() => {
-                preloaderGlow.style.animation = 'lotusGlow 1s ease forwards';
-            }, 300);
-        }
-    }
-
-    function animateTaglineWords() {
-        taglineWords.forEach((word, i) => {
-            setTimeout(() => {
-                word.style.opacity = '1';
-                word.style.transform = 'translateY(0)';
-                word.style.transition = 'all 0.5s ease';
-            }, i * 200);
-        });
-    }
-
-    function hidePreloader() {
-        preloader.classList.add('hidden');
-        document.body.style.overflow = '';
-        initHeroAnimations();
-        initParticles();
-    }
-
-    // Start preloader
-    document.body.style.overflow = 'hidden';
-    runPreloader();
-
     // ========== HERO ANIMATIONS ==========
     function initHeroAnimations() {
         const heroReveals = document.querySelectorAll('.hero-content .reveal-up');
@@ -99,6 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
         // Animate stat counters
         setTimeout(animateCounters, 1000);
     }
+
+    initHeroAnimations();
 
     // ========== PARTICLES ==========
     function initParticles() {
