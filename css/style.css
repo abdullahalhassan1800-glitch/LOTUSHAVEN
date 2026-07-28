@@ -616,7 +616,7 @@ img { max-width: 100%; display: block; }
     font-weight: 600;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: var(--gold);
+    color: #FFFFFF;
 }
 .hero-title {
     margin-bottom: 24px;
@@ -631,14 +631,12 @@ img { max-width: 100%; display: block; }
 }
 .hero-title-accent {
     font-style: italic;
-    color: var(--text-secondary);
+    color: var(--gold);
     font-weight: 400;
 }
 .hero-title-gold {
-    background: var(--gold-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #FFFFFF;
+    font-weight: 700;
 }
 .hero-desc {
     font-size: 1.1rem;
