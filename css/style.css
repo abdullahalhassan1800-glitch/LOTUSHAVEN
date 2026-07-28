@@ -1782,41 +1782,29 @@ img { max-width: 100%; display: block; }
 .whatsapp-float {
     position: fixed;
     bottom: 28px; right: 28px;
-    width: 60px; height: 60px;
+    padding: 0 20px 0 16px;
+    height: 56px;
     background: #25D366;
-    border-radius: 50%;
+    border-radius: 28px;
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 8px;
     color: white;
     font-size: 1.8rem;
     box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
     z-index: 999;
-    transition: width 0.3s ease, border-radius 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     animation: whatsappPulse 2s infinite;
     text-decoration: none;
-    overflow: hidden;
     white-space: nowrap;
 }
 .whatsapp-float .whatsapp-label {
     font-size: 1rem;
     font-weight: 600;
-    opacity: 0;
-    max-width: 0;
-    transition: opacity 0.3s ease, max-width 0.3s ease;
-    overflow: hidden;
 }
 .whatsapp-float:hover {
-    width: auto;
-    padding: 0 20px 0 16px;
-    border-radius: 30px;
     transform: scale(1.05);
     box-shadow: 0 6px 30px rgba(37, 211, 102, 0.5);
-}
-.whatsapp-float:hover .whatsapp-label {
-    opacity: 1;
-    max-width: 100px;
 }
 
 /* ============================
