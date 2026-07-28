@@ -249,15 +249,8 @@ document.addEventListener('DOMContentLoaded', () => {
             submitBtn.classList.add('loading');
             submitBtn.innerHTML = '<span>Submitting...</span>';
 
-            // Simulate form submission
             setTimeout(() => {
-                this.innerHTML = `
-                    <div class="form-success">
-                        <i class="fas fa-check-circle"></i>
-                        <h3>Thank You!</h3>
-                        <p>Your enquiry has been submitted successfully.<br>Our team will contact you within 24 hours.</p>
-                    </div>
-                `;
+                window.location.href = 'pages/thankyou.html';
             }, 1500);
         });
     }
@@ -271,13 +264,7 @@ document.addEventListener('DOMContentLoaded', () => {
             submitBtn.classList.add('loading');
             submitBtn.innerHTML = '<span>Submitting...</span>';
             setTimeout(() => {
-                this.innerHTML = `
-                    <div class="form-success">
-                        <i class="fas fa-check-circle"></i>
-                        <h3>Thank You!</h3>
-                        <p>Your enquiry has been submitted successfully.<br>Our team will contact you within 24 hours.</p>
-                    </div>
-                `;
+                window.location.href = 'pages/thankyou.html';
             }, 1500);
         });
     }
