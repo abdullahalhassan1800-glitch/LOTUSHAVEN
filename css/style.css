@@ -2226,8 +2226,8 @@ img { max-width: 100%; display: block; }
 
 [data-theme="light"] .hero-scroll-indicator span { color: #777; }
 [data-theme="light"] .stat-label { color: #FFFFFF; font-weight: 600; }
-[data-theme="light"] .stat-number,
-[data-theme="light"] .text-gold { color: #FFFFFF; }
+[data-theme="light"] .stat-number { color: #FFFFFF; }
+[data-theme="light"] .text-gold { color: var(--gold); }
 [data-theme="light"] .stat-suffix { color: #FFFFFF; }
 
 [data-theme="light"] .map-landmark {
