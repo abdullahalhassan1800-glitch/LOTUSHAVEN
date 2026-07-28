@@ -1847,10 +1847,10 @@ img { max-width: 100%; display: block; }
     .section-header { margin-bottom: 30px; }
 
     /* Hero section mobile */
-    .hero-section { min-height: auto; min-height: auto; padding: 120px 0 60px; }
+    .hero-section { min-height: auto !important; padding: 80px 0 30px; }
 
     /* Hero mobile */
-    .hero-content { padding-top: 90px; padding: 90px 16px 0; }
+    .hero-content { padding-top: 70px !important; padding: 70px 16px 0 !important; min-height: auto !important; }
     .hero-badge {
         padding: 6px 14px;
         margin-bottom: 20px;
@@ -2010,6 +2010,9 @@ img { max-width: 100%; display: block; }
 
     .hero-badge span:last-child { font-size: 0.5rem; letter-spacing: 0.5px; }
     .hero-desc { font-size: 0.88rem; }
+    .hero-section { min-height: auto !important; padding: 60px 0 20px; }
+    .hero-content { padding-top: 56px !important; min-height: auto !important; }
+    .hero-ctas { margin-bottom: 16px !important; }
     .stat-number { font-size: 1.6rem; }
     .stat-suffix { font-size: 1.1rem; }
 
