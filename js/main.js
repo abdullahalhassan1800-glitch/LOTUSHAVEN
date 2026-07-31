@@ -2,6 +2,21 @@
    LOTUSHAVEN — MAIN JAVASCRIPT
    ============================================ */
 
+var GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbxYHGI5a-miJkDc0gsjD3xGKI-fyThMcow-YdwIVcPTi4ZfAl-5_JxHk4TwSORIBOJf/exec';
+
+function submitToGoogleSheets(data) {
+    var params = new URLSearchParams();
+    for (var key in data) {
+        if (data.hasOwnProperty(key)) params.append(key, data[key]);
+    }
+    return fetch(GOOGLE_SHEETS_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: params.toString()
+    });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     // ========== PRELOADER ==========
     window.addEventListener('load', () => {
@@ -249,6 +264,17 @@ document.addEventListener('DOMContentLoaded', () => {
             submitBtn.classList.add('loading');
             submitBtn.innerHTML = '<span>Submitting...</span>';
 
+            var data = {
+                name: document.getElementById('formName').value.trim(),
+                phone: document.getElementById('formPhone').value.trim(),
+                email: document.getElementById('formEmail').value.trim(),
+                message: document.getElementById('formMessage').value.trim(),
+                interest: document.getElementById('formInterest') ? document.getElementById('formInterest').value : '',
+                source: 'Homepage Contact Form'
+            };
+            if (document.getElementById('formCity')) data.city = document.getElementById('formCity').value.trim();
+            submitToGoogleSheets(data);
+
             setTimeout(() => {
                 window.location.href = 'pages/thankyou.html';
             }, 1500);
@@ -263,6 +289,18 @@ document.addEventListener('DOMContentLoaded', () => {
             const submitBtn = this.querySelector('button[type="submit"]');
             submitBtn.classList.add('loading');
             submitBtn.innerHTML = '<span>Submitting...</span>';
+
+            var data = {
+                name: document.getElementById('pFormName').value.trim(),
+                phone: document.getElementById('pFormPhone').value.trim(),
+                email: document.getElementById('pFormEmail').value.trim(),
+                city: document.getElementById('pFormCity').value.trim(),
+                message: document.getElementById('pFormMessage').value.trim(),
+                interest: document.getElementById('pFormInterest') ? document.getElementById('pFormInterest').value : '',
+                source: 'Homepage Project Enquiry'
+            };
+            submitToGoogleSheets(data);
+
             setTimeout(() => {
                 window.location.href = 'pages/thankyou.html';
             }, 1500);

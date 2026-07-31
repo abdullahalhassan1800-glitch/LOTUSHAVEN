@@ -69,7 +69,7 @@
 
 /* --- Reset & Base --- */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; font-size: 16px; }
+html { scroll-behavior: smooth; font-size: 16px; overflow-x: hidden; }
 body {
     font-family: var(--font-sans);
     background: var(--black);
@@ -1782,28 +1782,31 @@ img { max-width: 100%; display: block; }
 .whatsapp-float {
     position: fixed;
     bottom: 28px; right: 28px;
-    padding: 0 20px 0 16px;
-    height: 56px;
     background: #25D366;
     border-radius: 28px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
     color: white;
-    font-size: 1.8rem;
-    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
-    z-index: 999;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    animation: whatsappPulse 2s infinite;
     text-decoration: none;
-    white-space: nowrap;
+    z-index: 999;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    transition: box-shadow 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 10px;
+    height: 54px;
+    gap: 4px;
+}
+.whatsapp-float i {
+    font-size: 1.6rem;
+    line-height: 1;
+    display: inline-block;
 }
 .whatsapp-float .whatsapp-label {
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 600;
+    line-height: 1;
+    white-space: nowrap;
 }
 .whatsapp-float:hover {
-    transform: scale(1.05);
     box-shadow: 0 6px 30px rgba(37, 211, 102, 0.5);
 }
 
@@ -1983,10 +1986,14 @@ img { max-width: 100%; display: block; }
 
     /* WhatsApp float mobile */
     .whatsapp-float {
-        width: 50px; height: 50px;
-        font-size: 1.5rem;
-        bottom: 20px; right: 20px;
+        padding: 0 12px;
+        height: 40px;
+        gap: 5px;
+        border-radius: 20px;
+        bottom: 16px; right: 12px;
     }
+    .whatsapp-float i { font-size: 1.2rem; }
+    .whatsapp-float .whatsapp-label { font-size: 0.8rem; display: inline; }
     .back-to-top {
         width: 36px; height: 36px;
         bottom: 20px; right: 80px;

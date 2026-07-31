@@ -1,0 +1,16 @@
+RewriteEngine On
+RewriteBase /
+
+# Serve clean URLs - map to actual .html files
+RewriteRule ^home/?$ index.html [NC,L]
+RewriteRule ^contact/?$ pages/contact.html [NC,L]
+RewriteRule ^about/?$ pages/about.html [NC,L]
+RewriteRule ^thankyou/?$ pages/thankyou.html [NC,L]
+RewriteRule ^rukmani-vihar/?$ pages/rukmani-vihar.html [NC,L]
+
+# Redirect old .html URLs to clean URLs (301)
+RewriteCond %{THE_REQUEST} \.html [NC]
+RewriteRule ^(?:pages/)?(contact|about|thankyou|rukmani-vihar)\.html$ /$1 [NC,R=301,L]
+
+# Default index
+DirectoryIndex index.html
