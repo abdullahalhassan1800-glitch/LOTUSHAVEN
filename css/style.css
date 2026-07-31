@@ -2468,3 +2468,83 @@ img { max-width: 100%; display: block; }
 @keyframes preloaderTaglineIn {
     to { opacity: 0.7; }
 }
+
+/* ============================
+   MOBILE BOTTOM ACTION BAR
+   ============================ */
+.mobile-bottom-bar {
+    display: none;
+    position: fixed;
+    bottom: 0; left: 0;
+    width: 100%;
+    z-index: 99998;
+    background: #0E0E0E;
+    border-top: 1px solid rgba(201, 168, 76, 0.25);
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.4);
+    padding: 6px 0 calc(6px + env(safe-area-inset-bottom, 0px));
+}
+[data-theme="light"] .mobile-bottom-bar {
+    background: #FFFFFF;
+    border-top-color: rgba(201, 168, 76, 0.35);
+}
+.mobile-bottom-bar-inner {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    max-width: 600px;
+    margin: 0 auto;
+    gap: 6px;
+    padding: 0 8px;
+}
+.mobile-bar-btn {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    padding: 6px 4px;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background 0.3s;
+    -webkit-tap-highlight-color: transparent;
+}
+.mobile-bar-btn i {
+    font-size: 1.15rem;
+    line-height: 1;
+}
+.mobile-bar-btn span {
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    line-height: 1;
+}
+.mobile-bar-btn-call { color: #C9A84C; }
+.mobile-bar-btn-call:hover { background: rgba(201, 168, 76, 0.12); }
+.mobile-bar-btn-wa { color: #25D366; }
+.mobile-bar-btn-wa:hover { background: rgba(37, 211, 102, 0.12); }
+.mobile-bar-btn-book {
+    color: #0E0E0E;
+    background: linear-gradient(135deg, #C9A84C, #D4A843);
+    border-radius: 10px;
+    min-width: 100px;
+}
+.mobile-bar-btn-book:hover { filter: brightness(1.08); }
+[data-theme="light"] .mobile-bar-btn-call { color: #8a6d1f; }
+[data-theme="light"] .mobile-bar-btn-wa { color: #1da851; }
+[data-theme="light"] .mobile-bar-btn-book { color: #FFFFFF; }
+
+@media (max-width: 768px) {
+    .mobile-bottom-bar { display: block; }
+    body { padding-bottom: 62px; }
+    .whatsapp-float { bottom: 74px; }
+    .back-to-top { bottom: 78px; }
+}
+@media (max-width: 480px) {
+    .mobile-bottom-bar { display: block; }
+    .mobile-bar-btn span { font-size: 0.62rem; }
+    .mobile-bar-btn-book { min-width: 80px; }
+    body { padding-bottom: 58px; }
+    .whatsapp-float { bottom: 70px; }
+}
